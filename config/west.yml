@@ -7,7 +7,9 @@ manifest:
       # - https://zmk.dev/docs/features/modules
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
     - name: gpeye
-      url-base: https://github.com/GPeye
+      url-base: https://githu b.com/GPeye
+    - name: m165437 #new entry
+      url-base: https://github.com/M165437 #new entry
   projects:
     - name: eyelash_sofle
       url: https://github.com/a741725193/zmk-sofle
@@ -15,6 +17,9 @@ manifest:
     - name: mario-peripheral-animation
       remote: gpeye
       revision: main 
+    - name: nice-view-gem #new entry
+      remote: m165437 #new entry
+      revision: main #new entry
     - name: zmk
       remote: zmkfirmware
       revision: main
