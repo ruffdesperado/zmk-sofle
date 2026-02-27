@@ -1,0 +1,7 @@
+boards:
+  - name: eyelash_sofle_left
+    socs:
+      - name: nrf52840
+  - name: eyelash_sofle_right
+    socs:
+      - name: nrf52840
