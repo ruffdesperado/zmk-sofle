@@ -9,15 +9,14 @@ manifest:
     - name: m165437 #new entry
       url-base: https://github.com/M165437 #new entry
   projects:
-    - name: eyelash_sofle
-      url: https://github.com/a741725193/zmk-sofle
-      revision: refactor
     - name: nice-view-gem #new entry
       remote: m165437 #new entry
-      revision: main #new entry
+      revision: v0.3.0 # must match the ZMK release below
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # v0.3.0 is the last Zephyr 3.5 release; the board files in boards/arm/
+      # don't build on ZMK main (Zephyr 4.1). Keep in sync with build.yml.
+      revision: v0.3.0
       import: app/west.yml
   self:
     path: config
