@@ -34,6 +34,12 @@
 #define KEYS_RIGHT  7  8  9 10 11 12 20 21 22 23 24 25 33 34 35 36 37 38 46 47 48 49 50 51
 #define KEYS_THUMBS 52 53 54 55 56 57 59 60 61 62 63  6 19 32 45 58
 
+// Layer numbers. TailorKey's Cursor and Mouse layers aren't ported yet, so
+// for now the Backspace and Enter thumb holds open Layer 1 instead.
+#define SYMBOL 3
+#define CURSOR 1
+#define MOUSE  1
+
 / {
 
     behaviors {
@@ -144,6 +150,36 @@
             hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMBS>;
             bindings = <&kp>, <&kp>;
         };
+
+        // TailorKey's thumb keys: tap for the key, hold for a layer.
+        thumb_lt: thumb_lt {
+            compatible = "zmk,behavior-hold-tap";
+            display-name = "Thumb Layer-Tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        space_lt: space_lt {
+            compatible = "zmk,behavior-hold-tap";
+            display-name = "Space Layer-Tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        // Tap for Caps Word, hold for Shift.
+        shift_cw: shift_cw {
+            compatible = "zmk,behavior-hold-tap";
+            display-name = "Shift / Caps Word";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&caps_word>;
+        };
     };
 
     scroll_encoder: scroll_encoder {
@@ -162,7 +198,7 @@
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
 &kp CAPS    &hrm_l_pinky LGUI A  &hrm_l_ring LALT S  &hrm_l_middle LCTRL D  &hrm_l_index LSHFT F  &kp G        &kp LEFT_ARROW   &kp H      &hrm_r_index RSHFT J  &hrm_r_middle RCTRL K  &hrm_r_ring LALT L  &hrm_r_pinky LGUI SEMI    &kp APOS
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &thumb_lt CURSOR BSPC  &kp ENTER        &space_lt SYMBOL SPACE  &thumb_lt MOUSE RET  &mo 2      &shift_cw RSHFT 0  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -194,14 +230,18 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
+        // TailorKey's Symbol layer (hold Space). The left thumbs carry the
+        // symbols the Glove80 has on its thumb and bottom rows.
+        symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE    &kp RBKT     &kp LPAR     &kp RPAR     &kp COMMA    &kp DOT      &trans       &none        &none        &none        &none        &none        &none
+&kp LBKT     &kp EXCL     &kp LBRC     &kp RBRC     &kp SEMI     &kp QMARK    &trans       &kp GRAVE    &sk RSHFT    &sk RCTRL    &sk RALT     &sk RGUI     &none
+&kp HASH     &kp CARET    &kp EQUAL    &kp UNDER    &kp DLLR     &kp STAR     &trans       &kp DQT      &kp BSPC     &kp TAB      &kp SPACE    &kp RET      &kp PLUS
+&kp TILDE    &kp LT       &kp PIPE     &kp MINUS    &kp GT       &kp FSLH     &trans       &kp SQT      &kp DEL      &kp LS(TAB)  &kp INS      &kp ESC      &none
+&trans       &kp BSLH     &kp AMPS     &kp AT       &kp COLON    &kp PRCNT    &trans       &none        &none        &none        &none        &none
             >;
+
+            display-name = "Symbol";
         };
     };
 };
