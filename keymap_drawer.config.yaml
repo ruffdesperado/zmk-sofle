@@ -267,6 +267,10 @@ parse_config:
       tap: Sel Line
     "&symb_dotdot":
       tap: ".."
+    "&mkp MB4":
+      tap: Back
+    "&mkp MB5":
+      tap: Forward
 
   # ZMK
   zmk_keycode_map:
