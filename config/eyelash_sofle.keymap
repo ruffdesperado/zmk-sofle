@@ -38,7 +38,7 @@
 #define KEYS_THUMBS 56 57 59 60 52  6 19 32 45 58
 
 // Layer numbers. TailorKey's Keypad and Magic layers aren't ported yet, so
-// for now they open the Sofle's original layers: Admin (layer 1) and System
+// for now they open the Sofle's original layers: Func (layer 1) and System
 // (layer 2).
 #define BASE       0
 #define LAYER1     1
@@ -52,7 +52,7 @@
 #define KEYPAD     LAYER1
 #define MAGIC      LAYER2
 
-// Pointer speed. Outside the Mouse layer (the 5-way switch on the Admin and
+// Pointer speed. Outside the Mouse layer (the 5-way switch on the Func and
 // System layers) it moves at the MOVE_VAL above with no extra multiplier;
 // raise the first number (e.g. 2 1) to speed it up. In the Mouse layer it runs
 // at ZMK's standard speed, which TailorKey is built on, and the Mouse layer's
@@ -332,7 +332,7 @@
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
-            display-name = "Admin";
+            display-name = "Func";
             sensor-bindings = <&scroll_encoder>;
         };
 
