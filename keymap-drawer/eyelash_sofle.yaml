@@ -320,8 +320,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - Ctrl+Tab
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+END
-  - Ctl+Sft+$$mdi:arrow-right-bold$$
+  - Ctl+A
+  - Sel Line
   - Ctl+F
   - Ctl+Sft+G
   - Ctl+G
@@ -379,9 +379,9 @@ layers:
   - $$mdi:mouse-right-click-outline$$
   - Forward
   - $$mdi:mouse-scroll-wheel$$
-  - {t: X, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: V, h: '$$mdi:apple-keyboard-command$$'}
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
