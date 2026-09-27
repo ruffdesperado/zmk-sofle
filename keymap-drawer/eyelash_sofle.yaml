@@ -57,8 +57,8 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:backspace$$', h: layer1}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace$$', h: Cursor}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: layer1}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-space$$', h: Symbol}
   - {t: '$$mdi:keyboard-return$$', h: layer1}
@@ -122,8 +122,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
@@ -260,3 +260,68 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  Cursor:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:keyboard-esc$$
+  - INS
+  - $$mdi:keyboard-tab-reverse$$
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+F
+  - Ctl+Sft+G
+  - Ctl+G
+  - Ctl+H
+  - Ctl+K
+  - $$mdi:printer-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:keyboard-space$$
+  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - Ctl+X
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+X
+  - $$mdi:keyboard-tab-reverse$$
+  - Ctl+Z
+  - Ctl+Y
+  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - LGUI
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
+  - Ctl+C
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+C
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  - Ctl+L
+  - Ctl+A
+  - Sel Line
+  - Sel Word
+  - Ctl+F
+  - Ctl+V
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+V
+  - HOME
+  - PG UP
+  - PG DN
+  - END
+  - Ctl+L
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctrl+Tab
+  - Win+Tab
+  - Alt+Tab
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - Sel None
+  - Sel Word
+  - Sel Line
+  - Ctl+A
+  - Ctl+Sft+$$mdi:arrow-right-bold$$
+  - Sft+END
