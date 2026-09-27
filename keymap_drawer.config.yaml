@@ -254,6 +254,19 @@ parse_config:
       tap: $$mdi:backup-restore$$
     "&bootloader":
       tap: $$mdi:progress-download$$
+    # TailorKey Cursor layer
+    "&mod_tab LALT":
+      tap: Alt+Tab
+    "&mod_tab LGUI":
+      tap: Win+Tab
+    "&mod_tab LCTRL":
+      tap: Ctrl+Tab
+    "&cur_select_word":
+      tap: Sel Word
+    "&cur_select_line":
+      tap: Sel Line
+    "&cur_select_none":
+      tap: Sel None
 
   # ZMK
   zmk_keycode_map:
