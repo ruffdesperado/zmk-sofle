@@ -198,7 +198,7 @@
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
 &kp CAPS    &hrm_l_pinky LGUI A  &hrm_l_ring LALT S  &hrm_l_middle LCTRL D  &hrm_l_index LSHFT F  &kp G        &kp LEFT_ARROW   &kp H      &hrm_r_index RSHFT J  &hrm_r_middle RCTRL K  &hrm_r_ring LALT L  &hrm_r_pinky LGUI SEMI    &kp APOS
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &thumb_lt CURSOR BSPC  &kp ENTER        &space_lt SYMBOL SPACE  &thumb_lt MOUSE RET  &mo 2      &shift_cw RSHFT 0  &kp DELETE
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &thumb_lt CURSOR BSPC  &kp DELETE  &kp ENTER       &space_lt SYMBOL SPACE  &thumb_lt MOUSE RET  &mo 2      &shift_cw RSHFT 0  &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
