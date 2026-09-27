@@ -52,20 +52,20 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - Admin
+  - Func
   - $$mdi:volume-off$$
   - HOME
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:backspace$$', h: Cursor}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Admin}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Func}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', h: Symbol}
   - {t: '$$mdi:keyboard-space$$', h: Mouse}
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-down-bold$$
   - END
-  Admin:
+  Func:
   - {t: '`', s: '~'}
   - F1
   - F2
