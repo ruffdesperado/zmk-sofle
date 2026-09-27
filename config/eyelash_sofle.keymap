@@ -41,7 +41,8 @@
 #define KEYS_THUMBS 56 57 59 60 52  6 19 32 45 58
 
 // Layer numbers. TailorKey's Keypad, Mouse and Magic layers aren't ported
-// yet, so for now they open the Sofle's original Layer 1 and Layer 2.
+// yet, so for now they open the Sofle's original layers: Admin (layer 1) and
+// System (layer 2).
 #define BASE   0
 #define LAYER1 1
 #define LAYER2 2
@@ -268,7 +269,7 @@
         combo_f12 { key-positions = <11 12>; bindings = <&kp F12>; layers = <BASE>; };
 
         // Caps Lock: the Backspace and Space thumb keys.
-        combo_caps_lock { key-positions = <56 59>; bindings = <&kp CAPS>; layers = <BASE>; };
+        combo_caps_lock { key-positions = <56 60>; bindings = <&kp CAPS>; layers = <BASE>; };
 
         // Sticky Hyper (Ctrl+Alt+Shift+Win) and Meh (Ctrl+Alt+Shift).
         combo_hyper { key-positions = <47 61>; bindings = <&sk LG(LA(LC(LSHFT)))>; layers = <BASE>; };
@@ -289,11 +290,11 @@
 &kp TAB                 &kp Q                   &kp W                   &kp E                   &kp R                   &kp T                   &kp DOWN_ARROW          &kp Y                   &kp U                   &kp I                   &kp O                   &kp P                   &kp BSLH
 &kp ESC                 &hrm_l_pinky LGUI A     &hrm_l_ring LALT S      &hrm_l_middle LCTRL D   &hrm_l_index LSHFT F    &kp G                   &kp LEFT_ARROW          &kp H                   &hrm_r_index RSHFT J    &hrm_r_middle RCTRL K   &hrm_r_ring LALT L      &hrm_r_pinky LGUI SEMI  &kp SQT
 &mo MAGIC               &kp Z                   &kp X                   &kp C                   &kp V                   &kp B                   &kp RIGHT_ARROW         &kp N                   &kp M                   &kp COMMA               &kp DOT                 &kp FSLH                &mo KEYPAD
-&kp C_MUTE              &kp HOME                &kp LEFT                &kp RIGHT               &thumb_lt CURSOR BSPC   &thumb_lt KEYPAD DEL    &kp ENTER               &space_lt SYMBOL SPACE  &thumb_lt MOUSE RET     &kp UP                  &kp DOWN                &kp END
+&kp C_MUTE              &kp HOME                &kp LEFT                &kp RIGHT               &thumb_lt CURSOR BSPC   &thumb_lt KEYPAD DEL    &kp ENTER               &thumb_lt MOUSE RET     &space_lt SYMBOL SPACE   &kp UP                  &kp DOWN                &kp END
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "LAYER0";
+            display-name = "Base";
         };
 
         layer_1 {
@@ -305,7 +306,7 @@
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
             >;
 
-            display-name = "layer1";
+            display-name = "Admin";
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -318,6 +319,7 @@
 &trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
+            display-name = "System";
             sensor-bindings = <&scroll_encoder>;
         };
 
@@ -343,7 +345,7 @@
 &kp CAPS           &kp RET            &kp LC(Y)          &kp LC(Z)          &kp BSPC           &kp LC(X)          &trans             &kp LC(X)          &kp LS(TAB)        &kp LC(Z)          &kp LC(Y)          &kp TAB            &kp PSCRN
 &sk LSHFT          &kp LGUI           &kp LALT           &kp LCTRL          &kp LSHFT          &kp LC(C)          &trans             &kp LC(C)          &kp LEFT           &kp UP             &kp DOWN           &kp RIGHT          &sk RSHFT
 &kp LC(L)          &kp LC(A)          &cur_select_line   &kp LC(A)          &kp LC(F)          &kp LC(V)          &trans             &kp LC(V)          &kp HOME           &kp PG_UP          &kp PG_DN          &kp END            &kp LC(L)
-&trans             &none              &kp LC(LS(G))      &kp LC(G)          &none              &mod_tab LCTRL     &trans             &kp LC(LS(RIGHT))  &kp LS(END)        &kp LC(F)          &kp LC(LS(G))      &kp LC(G)
+&trans             &none              &kp LC(LS(G))      &kp LC(G)          &none              &mod_tab LCTRL     &trans             &kp LS(END)        &kp LC(LS(RIGHT))  &kp LC(F)          &kp LC(LS(G))      &kp LC(G)
             >;
 
             display-name = "Cursor";
