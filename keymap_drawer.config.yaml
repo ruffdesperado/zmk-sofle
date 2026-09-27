@@ -254,6 +254,23 @@ parse_config:
       tap: $$mdi:backup-restore$$
     "&bootloader":
       tap: $$mdi:progress-download$$
+    # TailorKey
+    "&mod_tab LCTRL":
+      tap: Ctrl+Tab
+    "&mod_tab_chord LALT 4":
+      tap: Alt+Tab
+    "&mod_tab_chord LCTRL 4":
+      tap: Ctrl+Tab
+    "&mod_tab_chord LGUI 4":
+      tap: Win+Tab
+    "&cur_select_line":
+      tap: Sel Line
+    "&symb_dotdot":
+      tap: ".."
+    "&mkp MB4":
+      tap: Back
+    "&mkp MB5":
+      tap: Forward
 
   # ZMK
   zmk_keycode_map:
